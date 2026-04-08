@@ -14,17 +14,18 @@ O sistema tem como objetivo gerenciar o estoque de um comércio, permitindo o co
   RA: 1072616096  
   GitHub: https://github.com/iudhicunhasantos  
 
-- Vinicius Gral Andrade  
-  RA: 1072617131  
-  GitHub: https://github.com/oviniciussandrade  
+- Mateus Florindo Fraga  
+  RA: 1072613696  
+  GitHub: https://github.com/mateussfragaa
 
-- Ramon Muller  
+  - Ramon Muller  
   RA: 10726111039  
   GitHub: https://github.com/RamonMuller1002  
 
-- Mateus Florindo Fraga  
-  RA: 1072613696  
-  GitHub: https://github.com/mateussfragaa  
+  - Vinicius Gral Andrade  
+  RA: 1072617131  
+  GitHub: https://github.com/oviniciussandrade  
+
 
 ## 📚 Observação
 
