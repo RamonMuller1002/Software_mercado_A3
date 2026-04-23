@@ -1,6 +1,6 @@
 
 package principal;
-import modelos.ModelTeste;
+import modelos.Categorias;
 
 public class Principal {
     public static void main(String[] args) {
