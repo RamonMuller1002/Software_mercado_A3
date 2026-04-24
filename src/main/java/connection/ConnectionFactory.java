@@ -23,5 +23,13 @@ public class ConnectionFactory {
         }
     }
     
-
+    public static void closeConnection(Connection conn){
+        if (conn != null) {
+        try {
+            conn.close();
+        } catch (SQLException ex){
+            System.getLogger(ConnectionFactory.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        }
+    }
+  }
 }
