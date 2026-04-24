@@ -5,6 +5,7 @@ import database.DatabaseInitializer;
 import database.TableInitializer;
 import java.sql.Connection;
 import java.sql.SQLException;
+import DAO.MovimentacaoDAO;
 
 public class Principal {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
@@ -20,5 +21,7 @@ public class Principal {
         
         // Fechar conexão
         ConnectionFactory.closeConnection(conn);
+        
+        
     }
 }
