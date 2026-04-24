@@ -1,4 +1,4 @@
-package modelos;
+package model;
 
 import enums.*;
 
