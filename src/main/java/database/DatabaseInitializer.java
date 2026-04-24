@@ -9,7 +9,7 @@ import java.sql.Statement;
 public class DatabaseInitializer {
     private static final String URL = "jdbc:mysql://localhost:3306/";
     private static final String USER = "root";
-    private static final String PASS = "628387";
+    private static final String PASS = "";
     
     public static void createDatabase() throws SQLException{
         try(Connection conn = DriverManager.getConnection(URL, USER, PASS);
