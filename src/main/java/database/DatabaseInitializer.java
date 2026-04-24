@@ -20,6 +20,8 @@ public class DatabaseInitializer {
         } catch (SQLException e){
             System.out.println("Erro ao criar banco de dados: " + e.getMessage());
         }
+    
+    
         
         
     }
