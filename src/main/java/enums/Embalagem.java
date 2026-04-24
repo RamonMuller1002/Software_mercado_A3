@@ -1,9 +1,7 @@
 package enums;
 
-public class Embalagem {
-    public enum Tamanho{
-        LATA,
-        VIDRO,
-        PLASTICO;
-    }
+public enum Embalagem {
+    LATA,
+    VIDRO,
+    PLASTICO;
 }

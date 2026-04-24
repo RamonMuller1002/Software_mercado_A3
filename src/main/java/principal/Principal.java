@@ -1,6 +1,4 @@
-
 package principal;
-import modelos.Categorias;
 
 public class Principal {
     public static void main(String[] args) {

@@ -4,10 +4,11 @@ import enums.*;
 
 public class Produto {
 
+    private int id;
     private String nome;
     private double preco;
     private Unidade unidade;
-    private double quantidadeEstoque;
+    private int quantidadeEstoque;
     private int quantidadeMin;
     private int quantidadeMax;
     private Categorias categoria;
@@ -16,9 +17,10 @@ public class Produto {
     public Produto() {
     }
 
-    public Produto(String nome, double preco, Unidade unidade,
-            double quantidadeEstoque, int quantidadeMin, int quantidadeMax, Categorias categoria) {
+    public Produto(int id, String nome, double preco, Unidade unidade,
+            int quantidadeEstoque, int quantidadeMin, int quantidadeMax, Categorias categoria) {
 
+        this.id = id;
         this.nome = nome;
         this.preco = preco;
         this.unidade = unidade;
@@ -29,6 +31,10 @@ public class Produto {
     }
 
 //Gets
+    public int getId() {
+        return id;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -58,6 +64,10 @@ public class Produto {
     }
 
 //Sets
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -70,7 +80,7 @@ public class Produto {
         this.unidade = unidade;
     }
 
-    public void setQuantidadeEstoque(double quantidadeEstoque) {
+    public void setQuantidadeEstoque(int quantidadeEstoque) {
         this.quantidadeEstoque = quantidadeEstoque;
     }
 

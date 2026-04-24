@@ -1,12 +1,14 @@
 package modelos;
+
 import enums.*;
+
 public class Categorias {
 
     private String C_nome;
     private Embalagem embalagens;
     private Tamanho tamanho;
-    
-    public Categorias(){
+
+    public Categorias() {
     }
 
     public Categorias(String C_nome, Embalagem embalagens, Tamanho tamanho) {
@@ -38,8 +40,5 @@ public class Categorias {
     public void setTamanho(Tamanho tamanho) {
         this.tamanho = tamanho;
     }
-    
-    
-    
-}
 
+}
