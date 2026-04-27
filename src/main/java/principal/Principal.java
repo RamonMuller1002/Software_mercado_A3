@@ -5,7 +5,7 @@ import database.DatabaseInitializer;
 import database.TableInitializer;
 import java.sql.Connection;
 import java.sql.SQLException;
-import DAO.MovimentacaoDAO;
+import dao.MovimentacaoDAO;
 
 public class Principal {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
