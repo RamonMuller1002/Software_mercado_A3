@@ -56,4 +56,15 @@ public class MovimentacaoDAO {
     public static boolean deleteMovimentacao(int id){
         return minhaLista.removeIf(mov -> mov.getId() == id);
     }
+    
+    public void readAllMovimentacao(){
+        if(minhaLista.isEmpty()){
+            System.out.println("Nenhum registro encontrado");
+        }
+        else{
+            for(Movimentacao mov: minhaLista){
+                System.out.println(mov);
+            }
+        }
+    }
 }
