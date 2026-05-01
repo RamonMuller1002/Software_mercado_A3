@@ -34,7 +34,7 @@ public class MovimentacaoDAO {
         return false;
     }
 
-    public Movimentacao findById(int id) {
+    public Movimentacao readById(int id) {
         for (Movimentacao mov : minhaLista) {
             if (mov.getId() == id) {
                 return mov;
