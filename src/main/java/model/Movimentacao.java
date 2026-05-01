@@ -3,17 +3,22 @@
  */
 package model;
 
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import dao.MovimentacaoDAO;
 
 public class Movimentacao {
 
+    private int id;
     private String nomeProduto;
     private int quantidadeMovimentada; //quantidade de itens total
     private String dataMovimentacao;
     private String InOrOut;
 
-    public Movimentacao(String nomeProduto, int quantidadeMovimentada) {
+    public Movimentacao(int id, String nomeProduto, int quantidadeMovimentada) {
+
+        this.id = id;
         this.nomeProduto = nomeProduto;
         this.quantidadeMovimentada = quantidadeMovimentada;
         this.dataMovimentacao = setDataMovimentacao();
@@ -21,8 +26,16 @@ public class Movimentacao {
     }
 
     public Movimentacao() {
-        this("", 0);
-        //this(nomeProduto, quantidadeMovimentada);
+        this(0, "", 0);
+        //this(id, nomeProduto, quantidadeMovimentada);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNomeProduto() {
@@ -73,6 +86,11 @@ public class Movimentacao {
         }
 
         return InOrOut;
+    }
+
+    public boolean insertMovimentacaoBD() {
+        MovimentacaoDAO objeto = new MovimentacaoDAO();
+        return objeto.insertMovimentacao(this);
     }
 
 }

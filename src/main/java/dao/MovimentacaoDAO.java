@@ -1,23 +1,37 @@
 package dao;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
-
+import java.util.ArrayList;
 import model.Movimentacao;
 
 public class MovimentacaoDAO {
+    
+    private static int nextId = 1;
+    public static ArrayList<Movimentacao> minhaLista = new ArrayList<>();
 
-    public static void insertRegistro(String nome, String dataMovimentacao, Connection conn) throws SQLException {
-
-        Movimentacao teste = new Movimentacao("nome", 12);
-        System.out.println(teste);
-
-        try (Statement stmt = conn.createStatement()) {
-            stmt.execute("INSERT INTO movimentacao VALUES [ 02, " + teste.getDataMovimentacao() + ", " + teste.getQuantidadeMovimentada() + ", 'Entrada' ];");
-        } catch (SQLException e) {
-            System.out.println("Erro ao executar");
-        }
-
+    public static ArrayList<Movimentacao> getMinhaLista() {
+        return minhaLista;
     }
+
+    public static int maiorID() {
+        int maiorID = 0;
+        for (int i = 0; i < minhaLista.size(); i++) {
+            if (minhaLista.get(i).getId() > maiorID) {
+                maiorID = minhaLista.get(i).getId();
+            }
+        }
+        return maiorID;
+    }
+
+    public static boolean insertMovimentacao(Movimentacao movimentacao){
+       if (movimentacao != null) {
+            // Se o ID for 0, atribui um novo ID automático
+            if (movimentacao.getId() == 0) {
+                movimentacao.setId(nextId++);
+            }
+            minhaLista.add(movimentacao);
+            return true;
+        }
+        return false; 
+    }
+    
 }
