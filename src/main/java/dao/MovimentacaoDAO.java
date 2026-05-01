@@ -33,7 +33,7 @@ public class MovimentacaoDAO {
         }
         return false;
     }
-
+    
     public Movimentacao readById(int id) {
         for (Movimentacao mov : minhaLista) {
             if (mov.getId() == id) {
@@ -41,6 +41,16 @@ public class MovimentacaoDAO {
             }
         }
         return null;
+    }
+    
+    public boolean updateMovimentacao(Movimentacao movimentacao) {
+        for (int i = 0; i < minhaLista.size(); i++) {
+            if (minhaLista.get(i).getId() == movimentacao.getId()) {
+                minhaLista.set(i, movimentacao);
+                return true;
+            }
+        }
+        return false;
     }
     
     public static boolean deleteMovimentacao(int id){

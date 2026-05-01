@@ -72,7 +72,7 @@ public class Movimentacao {
     public void setInOrOut() {
         this.InOrOut = In_Or_Out(quantidadeMovimentada);
     }
-
+    
     /*Metodos de Movimentação? Pagamento? Registrar data?*/
     public static String In_Or_Out(int quantidadeMovimentada) {
         String InOrOut;
