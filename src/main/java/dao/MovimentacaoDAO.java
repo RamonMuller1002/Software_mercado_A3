@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import model.Movimentacao;
 
 public class MovimentacaoDAO {
-    
+
     private static int nextId = 1;
     public static ArrayList<Movimentacao> minhaLista = new ArrayList<>();
 
@@ -22,8 +22,8 @@ public class MovimentacaoDAO {
         return maiorID;
     }
 
-    public static boolean insertMovimentacao(Movimentacao movimentacao){
-       if (movimentacao != null) {
+    public static boolean insertMovimentacao(Movimentacao movimentacao) {
+        if (movimentacao != null) {
             // Se o ID for 0, atribui um novo ID automático
             if (movimentacao.getId() == 0) {
                 movimentacao.setId(nextId++);
@@ -31,7 +31,15 @@ public class MovimentacaoDAO {
             minhaLista.add(movimentacao);
             return true;
         }
-        return false; 
+        return false;
     }
-    
+
+    public Movimentacao findById(int id) {
+        for (Movimentacao mov : minhaLista) {
+            if (mov.getId() == id) {
+                return mov;
+            }
+        }
+        return null;
+    }
 }
