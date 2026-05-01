@@ -42,4 +42,8 @@ public class MovimentacaoDAO {
         }
         return null;
     }
+    
+    public static boolean deleteMovimentacao(int id){
+        return minhaLista.removeIf(mov -> mov.getId() == id);
+    }
 }
