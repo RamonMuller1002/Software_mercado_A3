@@ -7,6 +7,7 @@ package model;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import dao.MovimentacaoDAO;
+import static dao.MovimentacaoDAO.minhaLista;
 
 public class Movimentacao {
 
@@ -89,8 +90,26 @@ public class Movimentacao {
     }
 
     public boolean insertMovimentacaoBD() {
+        return MovimentacaoDAO.insertMovimentacao(this);
+    }
+    
+    public boolean updateMovimentacaoBR(){
         MovimentacaoDAO objeto = new MovimentacaoDAO();
-        return objeto.insertMovimentacao(this);
+        return objeto.updateMovimentacao(this);
+    }
+    
+    public boolean deleteMovimentacaoBD(int id){
+        return MovimentacaoDAO.deleteMovimentacao(id);
+    }
+    
+    public Movimentacao readMovimentacaoById(int id){
+        MovimentacaoDAO objeto = new MovimentacaoDAO();        
+        return objeto.readById(id);
+    }
+    
+    public void readMovimentacao(){
+        MovimentacaoDAO objeto = new MovimentacaoDAO();
+        objeto.readAllMovimentacao();
     }
 
 }
