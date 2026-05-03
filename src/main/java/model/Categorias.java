@@ -1,9 +1,12 @@
 package model;
 
 import enums.*;
+import java.util.*;
+import dao.CategoriaDAO;
 
 public class Categorias {
 
+    private int id;
     private String C_nome;
     private Embalagem embalagens;
     private Tamanho tamanho;
