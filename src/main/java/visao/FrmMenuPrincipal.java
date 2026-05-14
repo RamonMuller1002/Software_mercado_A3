@@ -47,18 +47,22 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu6.setText("Categorias");
+        jMenu6.addActionListener(this::jMenu6ActionPerformed);
         jMenuBar1.add(jMenu6);
 
         jMenu3.setText("Movimentação");
+        jMenu3.addActionListener(this::jMenu3ActionPerformed);
         jMenuBar1.add(jMenu3);
 
         jMenu7.setText("Relatórios");
+        jMenu7.addActionListener(this::jMenu7ActionPerformed);
         jMenuBar1.add(jMenu7);
 
         jMenu5.setText("Sobre");
         jMenuBar1.add(jMenu5);
 
         jMenu4.setText("Ajuda");
+        jMenu4.addActionListener(this::jMenu4ActionPerformed);
         jMenuBar1.add(jMenu4);
 
         setJMenuBar(jMenuBar1);
@@ -78,9 +82,29 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
-        FrmCadastroProduto objeto = new FrmCadastroProduto();
+        FrmCadastrarCategorias objeto = new FrmCadastrarCategorias();
         objeto.setVisible(true);
     }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void jMenu6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu6ActionPerformed
+        FrmCadastroProduto objeto = new FrmCadastroProduto();
+        objeto.setVisible(true);
+    }//GEN-LAST:event_jMenu6ActionPerformed
+
+    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+        FrmMovimentacao objeto = new FrmMovimentacao();
+        objeto.setVisible(true);
+    }//GEN-LAST:event_jMenu3ActionPerformed
+
+    private void jMenu7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu7ActionPerformed
+        FrmRelatorios objeto = new FrmRelatorios();
+        objeto.setVisible(true);
+    }//GEN-LAST:event_jMenu7ActionPerformed
+
+    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
+        FrmAjuda objeto = new FrmAjuda();
+        objeto.setVisible(true);
+    }//GEN-LAST:event_jMenu4ActionPerformed
 
     /**
      * @param args the command line arguments

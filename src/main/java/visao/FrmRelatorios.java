@@ -8,14 +8,14 @@ package visao;
  *
  * @author User
  */
-public class FrmMovimentacao extends javax.swing.JFrame {
+public class FrmRelatorios extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FrmMovimentacao.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FrmRelatorios.class.getName());
 
     /**
-     * Creates new form FrmMovimentacao
+     * Creates new form FrmRelatorios
      */
-    public FrmMovimentacao() {
+    public FrmRelatorios() {
         initComponents();
     }
 
@@ -34,7 +34,7 @@ public class FrmMovimentacao extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 654, Short.MAX_VALUE)
+            .addGap(0, 619, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -66,7 +66,7 @@ public class FrmMovimentacao extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new FrmMovimentacao().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new FrmRelatorios().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
