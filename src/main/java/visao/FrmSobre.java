@@ -8,14 +8,14 @@ package visao;
  *
  * @author User
  */
-public class FrmMenuPrincipal extends javax.swing.JFrame {
+public class FrmSobre extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FrmMenuPrincipal.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FrmSobre.class.getName());
 
     /**
-     * Creates new form FrmMenuPrincipal
+     * Creates new form FrmSobre
      */
-    public FrmMenuPrincipal() {
+    public FrmSobre() {
         initComponents();
     }
 
@@ -28,49 +28,17 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jMenu2.setText("Início");
-        jMenuBar1.add(jMenu2);
-
-        jMenu1.setText("Produtos");
-        jMenuBar1.add(jMenu1);
-
-        jMenu6.setText("Categorias");
-        jMenuBar1.add(jMenu6);
-
-        jMenu3.setText("Movimentação");
-        jMenuBar1.add(jMenu3);
-
-        jMenu7.setText("Relatórios");
-        jMenuBar1.add(jMenu7);
-
-        jMenu5.setText("Sobre");
-        jMenuBar1.add(jMenu5);
-
-        jMenu4.setText("Ajuda");
-        jMenuBar1.add(jMenu4);
-
-        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 727, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 442, Short.MAX_VALUE)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         pack();
@@ -98,17 +66,9 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new FrmMenuPrincipal().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new FrmSobre().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }
