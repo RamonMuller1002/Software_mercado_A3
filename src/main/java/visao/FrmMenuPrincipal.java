@@ -43,6 +43,7 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu1.setText("Produtos");
+        jMenu1.addActionListener(this::jMenu1ActionPerformed);
         jMenuBar1.add(jMenu1);
 
         jMenu6.setText("Categorias");
@@ -75,6 +76,11 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        FrmCadastroProduto objeto = new FrmCadastroProduto();
+        objeto.setVisible(true);
+    }//GEN-LAST:event_jMenu1ActionPerformed
 
     /**
      * @param args the command line arguments
