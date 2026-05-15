@@ -119,4 +119,45 @@ public class ProdutoDAO {
             return false;
         }
     }
+
+    // RETORNA MAIOR ID
+    public int maiorID() {
+
+        int maiorID = 0;
+
+        try {
+
+            Statement stmt = this.getConexao().createStatement();
+            ResultSet res = stmt.executeQuery("SELECT MAX(id) id FROM produto");
+            res.next();
+
+            maiorID = res.getInt("id");
+            stmt.close();
+
+        } catch (SQLException erro) {
+            System.out.println("Erro: " + erro);
+        } catch (ClassNotFoundException erro) {
+            System.out.println("Erro: " + erro);
+        }
+        return maiorID;
+    }
+
+    // DELETA PRODUTO
+    public boolean deleteProdutoBD(int id) {
+
+        try {
+
+            Statement stmt = this.getConexao().createStatement();
+            stmt.executeUpdate("DELETE FROM produto WHERE id = " + id);
+            stmt.close();
+
+        } catch (SQLException erro) {
+            System.out.println("Erro: " + erro);
+            return false;
+        } catch (ClassNotFoundException erro) {
+            System.out.println("Erro: " + erro);
+            return false;
+        }
+        return true;
+    }
 }
