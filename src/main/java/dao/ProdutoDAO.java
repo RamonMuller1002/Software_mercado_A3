@@ -86,4 +86,37 @@ public class ProdutoDAO {
         }
         return objeto;
     }
+
+    // INSERE PRODUTO
+    public boolean insertProdutoBD(Produto objeto) {
+
+        String sql = "INSERT INTO produto (id, nome, preco_unitario, unidade, "
+                + "quantidade_estoque, quantidade_minima, quantidade_maxima, categoria) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+        try {
+
+            PreparedStatement stmt = this.getConexao().prepareStatement(sql);
+
+            stmt.setInt(1, objeto.getId());
+            stmt.setString(2, objeto.getNome());
+            stmt.setDouble(3, objeto.getPreco());
+            stmt.setString(4, objeto.getUnidade().name());
+            stmt.setInt(5, objeto.getQuantidadeEstoque());
+            stmt.setInt(6, objeto.getQuantidadeMin());
+            stmt.setInt(7, objeto.getQuantidadeMax());
+            stmt.setString(8, objeto.getCategoria().getC_nome());
+
+            stmt.execute();
+            stmt.close();
+            return true;
+
+        } catch (SQLException erro) {
+            System.out.println("Erro: " + erro);
+            throw new RuntimeException(erro);
+
+        } catch (ClassNotFoundException erro) {
+            System.out.println("Erro: " + erro);
+            return false;
+        }
+    }
 }
