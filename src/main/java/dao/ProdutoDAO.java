@@ -160,4 +160,35 @@ public class ProdutoDAO {
         }
         return true;
     }
+
+    // ATUALIZA PRODUTO
+    public boolean updateProdutoBD(Produto objeto) {
+
+        String sql = "UPDATE produto SET nome = ?, preco_unitario = ?, unidade = ?, "
+                + "quantidade_estoque = ?, quantidade_minima = ?, quantidade_maxima = ?, categoria = ? WHERE id = ?";
+
+        try {
+
+            PreparedStatement stmt = this.getConexao().prepareStatement(sql);
+            stmt.setString(1, objeto.getNome());
+            stmt.setDouble(2, objeto.getPreco());
+            stmt.setString(3, objeto.getUnidade().name());
+            stmt.setInt(4, objeto.getQuantidadeEstoque());
+            stmt.setInt(5, objeto.getQuantidadeMin());
+            stmt.setInt(6, objeto.getQuantidadeMax());
+            stmt.setString(7, objeto.getCategoria().getC_nome());
+            stmt.setInt(8, objeto.getId());
+
+            stmt.execute();
+            stmt.close();
+            return true;
+
+        } catch (SQLException erro) {
+            System.out.println("Erro: " + erro);
+            throw new RuntimeException(erro);
+        } catch (ClassNotFoundException erro) {
+            System.out.println("Erro: " + erro);
+            return false;
+        }
+    }
 }
