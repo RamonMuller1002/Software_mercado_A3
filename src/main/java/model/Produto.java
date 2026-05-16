@@ -1,6 +1,8 @@
 package model;
 
-import enums.*;
+import enums.Unidade;
+import java.util.ArrayList;
+import dao.ProdutoDAO;
 
 public class Produto {
 
@@ -12,6 +14,7 @@ public class Produto {
     private int quantidadeMin;
     private int quantidadeMax;
     private Categorias categoria;
+    private ProdutoDAO dao = new ProdutoDAO();
 
 //Construtores
     public Produto() {
@@ -29,7 +32,7 @@ public class Produto {
         this.quantidadeMax = quantidadeMax;
         this.categoria = categoria;
     }
-
+   
 //Gets
     public int getId() {
         return id;
@@ -47,7 +50,7 @@ public class Produto {
         return unidade;
     }
 
-    public double getQuantidadeEstoque() {
+    public int getQuantidadeEstoque() {
         return quantidadeEstoque;
     }
 
@@ -96,4 +99,22 @@ public class Produto {
         this.categoria = categoria;
     }
 
+    public ArrayList<Produto> getMinhaLista() {
+        return dao.getMinhaLista();
+    }
+    
+// Cadastra novo produto
+
+    public boolean insertProdutoBD(String nome,double preco,Unidade unidade,int quantidadeEstoque,int quantidadeMin,int quantidadeMax,Categorias categoria) {
+        int novoId = this.maiorID() + 1;
+        Produto objeto = new Produto(novoId, nome, preco, unidade, quantidadeEstoque, quantidadeMin, quantidadeMax, categoria);
+        dao.insertProdutoBD(objeto);
+        return true;
+    }
+
+// retorna o maior ID da nossa base de dados
+
+    public int maiorID() {
+        return dao.maiorID();
+    }
 }
