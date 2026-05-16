@@ -127,6 +127,12 @@ public class Produto {
         return true;
     }
     
+// Carrega dados de um produto especÍfico pelo seu ID
+
+    public Produto carregaProduto(int id) {
+        return dao.carregaProduto(id);
+    }
+    
 // retorna o maior ID da nossa base de dados
 
     public int maiorID() {
