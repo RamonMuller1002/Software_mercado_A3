@@ -111,7 +111,22 @@ public class Produto {
         dao.insertProdutoBD(objeto);
         return true;
     }
+    
+// Deleta um produto específico pelo seu campo ID
 
+    public boolean deleteProdutoBD(int id) {
+        dao.deleteProdutoBD(id);
+        return true;
+    }
+    
+// Edita um produto específico pelo seu campo ID
+
+    public boolean updateProdutoBD(String nome, double preco, Unidade unidade, int quantidadeEstoque, int quantidadeMin, int quantidadeMax, Categorias categoria) {
+        Produto objeto = new Produto(id, nome, preco, unidade, quantidadeEstoque, quantidadeMin, quantidadeMax, categoria);        
+        dao.updateProdutoBD(objeto);
+        return true;
+    }
+    
 // retorna o maior ID da nossa base de dados
 
     public int maiorID() {
